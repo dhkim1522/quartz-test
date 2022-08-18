@@ -1,2 +1,4 @@
-package project.quartztest.scheduler;public class QuartzSchedulerHandler {
+package project.quartztest.scheduler;
+
+public class QuartzSchedulerHandler {
 }
