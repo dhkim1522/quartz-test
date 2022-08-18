@@ -1,4 +1,11 @@
 server:
   port: 4000
 
-
+spring:
+  quartz:
+    wait-for-jobs-to-complete-on-shutdown: false
+    properties:
+      org:
+        quartz:
+          threadPool:
+            threadCount: 20

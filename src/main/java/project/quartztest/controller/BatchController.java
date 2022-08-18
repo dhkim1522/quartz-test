@@ -22,10 +22,14 @@ public class BatchController {
     @PostConstruct
     public void start() {
 
+        // Created Schedule Job
         JobDetail jobDetail = buildJobDetail(QuartzJob.class, "testJob", "test", new HashMap());
 
         try {
-            scheduler.scheduleJob(jobDetail, buildJobTrigger("1 * * * * ?"));
+
+            // Started Scheduler
+            scheduler.scheduleJob(jobDetail, buildJobTrigger("*/30 * * * * ?"));
+
         } catch (SchedulerException e) {
             e.printStackTrace();
         }
